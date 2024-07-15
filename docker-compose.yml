@@ -4,7 +4,8 @@ services:
   db:
     image: ''
     ports:
-      - 27217:27017
+      - 27017:27017
     restart: on-failure
     environment:
-
+      - MONGODB_ADVERTISED_HOSTNAME=localhost
+      - ALLOW_EMPTY_PASSWORD=yes
